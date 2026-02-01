@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
 
-const mongoose = require("mongoose");
-
 const userFormSchema = new mongoose.Schema(
     {
         // kis user ka form (cookie auth)

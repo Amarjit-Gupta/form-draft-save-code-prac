@@ -4,6 +4,7 @@ import "dotenv/config.js";
 import connectDB from './config/db.js';
 import cookieParser from 'cookie-parser';
 import authroute from './route/authRoute.js';
+import dataRoute from './route/dataRoute.js';
 
 const app = express();
 
@@ -21,6 +22,8 @@ app.use(cookieParser());
 connectDB();
 
 app.use("/auth",authroute);
+
+app.use("/data",dataRoute);
 
 app.get("/test",(req,res)=>{
     return res.status(200).json({mesage:"API Working"});
